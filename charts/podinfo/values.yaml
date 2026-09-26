@@ -19,3 +19,6 @@ serviceMonitor:
   port: http
   path: /metrics
   interval: 30s
+
+grafanaDashboards:
+  enabled: true
