@@ -1,1 +1,7 @@
 # Per-environment overrides for metrics-server in live. Nest under the chart name.
+metrics-server:
+  # kind kubelet serving certs are self-signed with no IP SANs; without this the
+  # scraper fails x509 verification and the pod never becomes Ready.
+  # Appended to the chart's defaultArgs. Local/dev clusters only - do not copy to prod.
+  args:
+    - --kubelet-insecure-tls
