@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: metrics-server
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  sources:
+    - repoURL: https://github.com/OmalCooray/argocd-plugin-livetest
+      targetRevision: master
+      path: charts/metrics-server
+      helm:
+        valueFiles:
+          - $values/environments/live/values/metrics-server.yaml
+    - repoURL: https://github.com/OmalCooray/argocd-plugin-livetest
+      targetRevision: master
+      ref: values
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: kube-system
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true
