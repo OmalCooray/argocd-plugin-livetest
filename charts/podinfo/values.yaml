@@ -10,3 +10,12 @@
 #     image:
 #       tag: "6.15.0"
 podinfo: {}
+
+# ServiceMonitor (top-level, not under the subchart)
+serviceMonitor:
+  enabled: true
+  selectorLabels:
+    app.kubernetes.io/name: podinfo
+  port: http
+  path: /metrics
+  interval: 30s
