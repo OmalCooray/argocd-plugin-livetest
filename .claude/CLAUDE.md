@@ -15,6 +15,7 @@ _(Updated by `/argocd-add-chart`.)_
 
 | App | Upstream chart | Version | Repo |
 |-----|----------------|---------|------|
+| podinfo | podinfo | 6.15.0 | https://stefanprodan.github.io/podinfo |
 
 ## Deployment matrix
 
