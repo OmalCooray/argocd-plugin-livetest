@@ -22,6 +22,9 @@ kube-prometheus-stack:
           cpu: 100m
           memory: 400Mi
       retention: 6h
+      serviceMonitorSelectorNilUsesHelmValues: false
+      podMonitorSelectorNilUsesHelmValues: false
+      ruleSelectorNilUsesHelmValues: false
   grafana:
     resources:
       requests:
