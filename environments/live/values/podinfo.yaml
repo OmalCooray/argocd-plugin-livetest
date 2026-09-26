@@ -3,6 +3,8 @@ podinfo:
   image:
     tag: "6.15.0"
   replicaCount: 2
+  extraArgs:
+    - --port-metrics=not-a-number
   resources:
     requests:
       cpu: 50m
