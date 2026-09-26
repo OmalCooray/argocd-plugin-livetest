@@ -1,0 +1,12 @@
+# Overrides for the upstream chart "prometheus-operator-crds".
+# Everything nests under the dependency name so Helm routes it to the subchart.
+# Pull the upstream defaults with:
+#   helm show values prometheus-operator-crds --repo https://prometheus-community.github.io/helm-charts --version 32.0.1
+# then copy ONLY the keys you are changing under the block below.
+#
+# Starts as an empty map ({}) so Helm has a valid (no-op) value for the subchart.
+# Replace {} with a real mapping when you add overrides, e.g.:
+#   prometheus-operator-crds:
+#     image:
+#       tag: "32.0.1"
+prometheus-operator-crds: {}
