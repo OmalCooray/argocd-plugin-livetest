@@ -1,1 +1,4 @@
 # Per-environment overrides for podinfo in live. Nest under the chart name.
+podinfo:
+  image:
+    tag: "6.999.999"
