@@ -1,0 +1,12 @@
+# Overrides for the upstream chart "kube-prometheus-stack".
+# Everything nests under the dependency name so Helm routes it to the subchart.
+# Pull the upstream defaults with:
+#   helm show values kube-prometheus-stack --repo https://prometheus-community.github.io/helm-charts --version 91.7.0
+# then copy ONLY the keys you are changing under the block below.
+#
+# Starts as an empty map ({}) so Helm has a valid (no-op) value for the subchart.
+# Replace {} with a real mapping when you add overrides, e.g.:
+#   kube-prometheus-stack:
+#     image:
+#       tag: "91.7.0"
+kube-prometheus-stack: {}
