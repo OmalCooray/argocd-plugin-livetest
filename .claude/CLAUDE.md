@@ -18,6 +18,7 @@ _(Updated by `/argocd-add-chart`.)_
 | podinfo | podinfo | 6.15.0 | https://stefanprodan.github.io/podinfo |
 | prometheus-operator-crds | prometheus-operator-crds | 32.0.1 | https://prometheus-community.github.io/helm-charts |
 | metrics-server | metrics-server | 3.14.0 | https://kubernetes-sigs.github.io/metrics-server/ |
+| kube-prometheus-stack | kube-prometheus-stack | 91.7.0 | https://prometheus-community.github.io/helm-charts |
 
 ## Deployment matrix
 
