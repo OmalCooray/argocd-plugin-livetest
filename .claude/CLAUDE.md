@@ -25,3 +25,4 @@ _(Updated by `/argocd-deploy`.)_
 | App | live |
 |-----|----------------|
 | podinfo | yes |
+| prometheus-operator-crds | yes |
