@@ -1,0 +1,29 @@
+# Per-environment overrides for kube-prometheus-stack in live. Nest under the chart name.
+kube-prometheus-stack:
+  # CRDs are already owned by the prometheus-operator-crds app
+  crds:
+    enabled: false
+  alertmanager:
+    enabled: false
+  nodeExporter:
+    enabled: false
+  kubeControllerManager:
+    enabled: false
+  kubeScheduler:
+    enabled: false
+  kubeEtcd:
+    enabled: false
+  kubeProxy:
+    enabled: false
+  prometheus:
+    prometheusSpec:
+      resources:
+        requests:
+          cpu: 100m
+          memory: 400Mi
+      retention: 6h
+  grafana:
+    resources:
+      requests:
+        cpu: 50m
+        memory: 128Mi

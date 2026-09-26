@@ -29,3 +29,4 @@ _(Updated by `/argocd-deploy`.)_
 | podinfo | yes |
 | prometheus-operator-crds | yes |
 | metrics-server | yes |
+| kube-prometheus-stack | yes |
