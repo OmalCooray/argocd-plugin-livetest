@@ -26,6 +26,12 @@ kube-prometheus-stack:
       podMonitorSelectorNilUsesHelmValues: false
       ruleSelectorNilUsesHelmValues: false
   grafana:
+    sidecar:
+      dashboards:
+        folderAnnotation: grafana_folder
+        searchNamespace: ALL
+        provider:
+          foldersFromFilesStructure: true
     resources:
       requests:
         cpu: 50m
