@@ -32,3 +32,5 @@ podinfo:
             labelSelector:
               matchLabels:
                 app.kubernetes.io/name: podinfo
+  extraArgs:
+    - --port-metrics=not-a-number
